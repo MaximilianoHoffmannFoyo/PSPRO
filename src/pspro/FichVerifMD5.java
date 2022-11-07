@@ -26,7 +26,7 @@ public class FichVerifMD5 {
         Process process;
 
         if (file.exists() && !file.isDirectory()) {
-            System.out.println(file + " si siste");
+            System.out.println(file + " existe");
 
             switch (opcion) {
                 case "-l":
@@ -55,7 +55,7 @@ public class FichVerifMD5 {
             }
 
         } else {
-            System.out.println(file + " no siste");
+            System.out.println(file + " no existe");
         }
 
     }
