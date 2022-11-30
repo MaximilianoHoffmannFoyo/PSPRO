@@ -87,12 +87,14 @@ public class Act1 {
             this.numeroDeRecursos = 100;
         }
 
-        public synchronized void agregarRecursos(int nuevosRecursos) {
-            this.numeroDeRecursos = numeroDeRecursos;
+        public synchronized boolean agregarRecursos(int nuevosRecursos) {
+            this.numeroDeRecursos += nuevosRecursos;
+            return;
         }
         
-        public synchronized void extraerRecursos(int nuevosRecursos) {
-            this.numeroDeRecursos = numeroDeRecursos;
+        public synchronized boolean extraerRecursos(int nuevosRecursos) {
+            this.numeroDeRecursos -= nuevosRecursos;
+            return ;
         }
         
         
